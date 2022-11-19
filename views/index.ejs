@@ -7,6 +7,30 @@
     <title>formulario</title>
   </head>
   <body>
-    <h1>teste de renderização</h1>
+    <form
+      action="/auth"
+      method="post"
+      style="
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 300px;
+        margin: 40px auto;
+      "
+    >
+      <input type="text" placeholder="nome" name="nome" /><br />
+      <p><%=nomeErro %></p>
+
+      <input
+        type="text"
+        placeholder="email"
+        name="email"
+        value="<%= email%>"
+      /><br />
+      <p><%=emailErro %></p>
+      <input type="text" placeholder="pontos" name="pontos" /><br />
+      <p><%=pontoErro %></p>
+      <button type="submit">entrar</button>
+    </form>
   </body>
 </html>
