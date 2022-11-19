@@ -56,6 +56,7 @@ app.post("/auth", (req, res) => {
     emailErro != undefined ||
     pontoErro != undefined
   ) {
+    //setando valores na memoria flash
     req.flash("nomeErro", nomeErro);
     req.flash("emailErro", emailErro);
     req.flash("pontoErro", pontoErro);
